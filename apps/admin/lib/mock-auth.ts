@@ -8,8 +8,8 @@ interface MockStaffUser {
   id: string;
   email: string;
   passwordHash: string;
-  role: "STAFF";
-  status: "ACTIVE";
+  role: "STAFF" | "SYSTEM";
+  status: "ACTIVE" | "SUSPENDED";
   backofficeRole: string;
 }
 

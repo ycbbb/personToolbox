@@ -1,11 +1,10 @@
 import NextAuth from "next-auth";
 import { authConfig } from "@/lib/auth.config";
 import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
 
 const { auth } = NextAuth(authConfig);
 
-export default auth(async function middleware(req: NextRequest) {
+export default auth(async function middleware(req) {
   const pathname = req.nextUrl.pathname;
 
   // Allow public paths
